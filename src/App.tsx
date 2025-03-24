@@ -1,11 +1,15 @@
-import Header from "./components/layout/Header";
 import "./styles/main.scss";
+import Layout from "./components/layout/Layout";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Routes>
+      {/* Все страницы внутри MainLayout получат Header и Footer */}
+      <Route element={<Layout />}>
+        <Route path="/about" element={<Layout />} />
+      </Route>
+    </Routes>
   );
 }
 

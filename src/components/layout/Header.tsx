@@ -9,8 +9,8 @@ import userIcon from "../../assets/images/icons/user.svg";
 import "../../styles/Layout/header.scss";
 function Header() {
   return (
-    <header className="header">
-      <div className="header__container">
+    <header className="header ">
+      <div className="header__container wrapper">
         {/* Блок логотипа */}
         <div className="header__logo">
           <img src={logo} alt="Логотип WDB" className="header__logo-image" />

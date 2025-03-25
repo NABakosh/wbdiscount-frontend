@@ -1,16 +1,18 @@
-import "./styles/main.scss";
-import Layout from "./components/layout/Layout";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/layout/Layout'
+import Home from './pages/Home'
+import ProfileBuyer from './pages/ProfileBuyer'
+import './styles/main.scss'
 
 function App() {
-  return (
-    <Routes>
-      {/* Все страницы внутри MainLayout получат Header и Footer */}
-      <Route element={<Layout />}>
-        <Route path="/about" element={<Layout />} />
-      </Route>
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path='/' element={<Layout />}>
+				<Route index element={<Home />} />
+				<Route path='/profile' element={<ProfileBuyer />} />
+			</Route>
+		</Routes>
+	)
 }
 
-export default App;
+export default App

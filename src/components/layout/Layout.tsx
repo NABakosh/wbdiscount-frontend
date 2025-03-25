@@ -1,21 +1,16 @@
-import Header from "./Header";
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom'
+import Header from './Header'
 
-type Props = {};
-
-function Layout({}: Props) {
-  return (
-    <div className="layout">
-      <Header />
-
-      <main className="layout__content">
-        {/* Outlet - место для вставки контента страниц */}
-        <Outlet />
-      </main>
-
-      <h1>FOOTER</h1>
-    </div>
-  );
+function Layout() {
+	return (
+		<div className='layout'>
+			<Header />
+			<main className='layout__content'>
+				<Outlet />
+			</main>
+			<span>FOOTER</span>
+		</div>
+	)
 }
 
-export default Layout;
+export default Layout

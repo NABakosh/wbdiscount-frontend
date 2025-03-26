@@ -22,11 +22,11 @@ const Home = ({}: Props) => {
 						<img src={dropIcon} alt='' />
 					</div>
 					<div className='dropdown dropdown-price'>
-						<span>Цена, ₽</span>
+						<span>Кэшбек, %</span>
 						<img src={dropIcon} alt='' />
 					</div>
 					<div className='dropdown dropdown-price'>
-						<span>Цена, ₽</span>
+						<span>Сортировка</span>
 						<img src={dropIcon} alt='' />
 					</div>
 				</div>

@@ -46,6 +46,16 @@
     display: flex;
     align-items: start;
     gap: 170px;
+    @media (max-width: 1000px) {
+      gap: 40px;
+    }
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 30px;
+      .footer__section {
+        gap: 10px;
+      }
+    }
   }
   &__section {
     display: flex;
@@ -54,6 +64,7 @@
     h3 {
       font-weight: 700;
       font-size: 16px;
+      color: black;
       font-family: "DM Sans", sans-serif;
     }
   }
@@ -65,6 +76,9 @@
       display: flex;
       align-items: center;
       gap: 4px;
+      p {
+        color: #6f6c90;
+      }
     }
   }
   &__links {

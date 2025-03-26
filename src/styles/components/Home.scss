@@ -35,6 +35,9 @@
       align-items: center;
       width: max-content;
       gap: 29px;
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
       .dropdown {
         display: flex;
         align-items: center;
@@ -50,9 +53,12 @@
   &__groups-card {
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
     .card {
       display: flex;
       flex-direction: column;

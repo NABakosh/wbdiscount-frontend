@@ -9,19 +9,24 @@
   background-color: #f8fafc;
   box-sizing: border-box;
   padding-top: 77px;
+  color: #6f6c90;
+
   .info {
     display: flex;
     align-items: start;
     justify-content: space-between;
   }
+
   &__header {
     display: flex;
     flex-direction: column;
+
     .logo {
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 37px;
+
       span {
         color: black;
         margin: 0;
@@ -35,21 +40,43 @@
     p {
       color: #6f6c90;
       margin-bottom: 24px;
+      line-height: 25px; // <-- Сохранено из обеих версий
     }
   }
+
+  // Остальные стили из любой версии (они почти идентичны)
   &__icons {
     display: flex;
     align-items: center;
     gap: 14px;
   }
+  .info {
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 30px;
+      .footer__section {
+        gap: 10px;
+      }
+    }
+  }
+  // Добавьте медиа-запросы, если они были в одной из версий
   &__sections {
     display: flex;
     align-items: start;
     gap: 170px;
+    .for-mobile {
+      display: flex;
+      align-items: start;
+      gap: 170px;
+      @media (max-width: 500px) {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
     @media (max-width: 1000px) {
       gap: 40px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       gap: 30px;
       .footer__section {
@@ -60,55 +87,66 @@
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     h3 {
+      font-size: 17px;
       font-weight: 700;
-      font-size: 16px;
-      color: black;
       font-family: "DM Sans", sans-serif;
-    }
-  }
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    .item {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      p {
-        color: #6f6c90;
-      }
+      color: black;
     }
   }
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
     a {
-      color: #6f6c90;
       text-decoration: none;
+      color: black;
     }
   }
   &__link-column {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
+
     a {
-      color: #6f6c90;
       text-decoration: none;
+      color: black;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 69px;
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      width: max-content;
     }
   }
   &__bottom {
-    margin-top: 60px;
-    padding-top: 60px;
-    border-top: 1px solid #d9dbe9;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 21px;
-    p {
-      color: #6f6c90;
+    border-top: 1px solid #d9dbe9;
+    padding-top: 25px;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      gap: 25px;
+      p{
+        font-size: 15px;
+      }
+      &__legal {
+        @media (max-width: 500px) {
+          flex-direction: column;
+          gap: 25px;
+          a{
+            font-size: 15px;
+          }
+        }
+      }
     }
   }
 }

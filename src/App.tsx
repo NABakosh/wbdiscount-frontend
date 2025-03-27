@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import Home from "./pages/Home";
-import ProfileBuyer from "./pages/ProfileBuyer";
+import { Favourites, SellerCard, ProfileBuyer, Home } from "./pages/index";
+
 import "./styles/main.scss";
 
 function App() {
@@ -10,6 +10,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<ProfileBuyer />} />
+        <Route path="/profile-seller" element={<SellerCard />} />
+        <Route path="/favorites" element={<Favourites />} />
       </Route>
     </Routes>
   );

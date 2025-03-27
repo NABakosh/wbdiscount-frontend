@@ -1,0 +1,16 @@
+.round-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-color: var(--border-checkBox);
+}
+
+.round-checkbox.checked {
+  background-color: var(--price-color);
+  border-color: transparent;
+}

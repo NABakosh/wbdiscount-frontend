@@ -1,6 +1,5 @@
 .Home-container {
   margin-top: 20px !important;
-
   .Banner {
     img {
       width: 100%;
@@ -32,38 +31,41 @@
     }
     .group-dropdown {
       display: flex;
-      align-items: center;
+      align-items: start;
       width: max-content;
       gap: 29px;
-      @media (max-width: 500px) {
-        flex-direction: column;
-      }
+
       .dropdown {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        justify-content: space-between;
         padding: 12px;
         padding-right: 21px;
         border: 1px solid #d0d5dd;
         border-radius: 8px;
+        width: 210px;
       }
     }
   }
   &__groups-card {
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
     .card {
       display: flex;
       flex-direction: column;
-      width: max-content;
+      width: 100%;
       gap: 3px;
+      .topCard {
+        width: 100%;
+        img {
+          width: 100%;
+          aspect-ratio: 1/1.2;
+        }
+      }
       .info {
         margin-top: 15px;
         display: flex;

@@ -5,6 +5,7 @@ import dropIcon from ".././assets/images/icons/dropDown.svg";
 import Card from "../components/layout/Card";
 import InputDropDown from "../components/ui/InputDropDown";
 import "../styles/components/Home.scss";
+import "../styles/ui/DropDown.scss";
 import { DropDown } from "../components/ui/DropDown";
 
 type Props = {};
@@ -28,19 +29,16 @@ const Home = ({}: Props) => {
         </div>
         <div className="group-dropdown">
           {itemsInput.map((obj) => (
-            <div>
+            <div className="container">
               <InputDropDown
                 dropIcon={obj.img}
                 key={obj.id}
                 name={obj.name}
                 id={obj.id}
-                setActiveDropdown={(i) => setActiveDropdown(i)}
-              ></InputDropDown>
-              <DropDown
                 activeDropdown={activeDropdown}
-                setActiveDropdown={setActiveDropdown}
-                id={obj.id}
-              />
+                setActiveDropdown={(i: null | string) => setActiveDropdown(i)}
+              ></InputDropDown>
+              {obj.id === activeDropdown ? <DropDown /> : ""}
             </div>
           ))}
         </div>

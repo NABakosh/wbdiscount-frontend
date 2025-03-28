@@ -1,6 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import { Favourites, SellerCard, ProfileBuyer, Home } from "./pages/index";
+import {
+  Favourites,
+  SellerCard,
+  ProfileBuyer,
+  Home,
+  Finance,
+} from "./pages/index";
 
 import "./styles/main.scss";
 
@@ -12,6 +18,7 @@ function App() {
         <Route path="/profile" element={<ProfileBuyer />} />
         <Route path="/profile-seller" element={<SellerCard />} />
         <Route path="/favorites" element={<Favourites />} />
+        <Route path="/finance" element={<Finance />} />
       </Route>
     </Routes>
   );

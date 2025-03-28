@@ -135,14 +135,14 @@
     @media (max-width: 500px) {
       flex-direction: column;
       gap: 25px;
-      p{
+      p {
         font-size: 15px;
       }
       &__legal {
         @media (max-width: 500px) {
           flex-direction: column;
           gap: 25px;
-          a{
+          a {
             font-size: 15px;
           }
         }

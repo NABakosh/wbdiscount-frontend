@@ -1,0 +1,101 @@
+.wrapper {
+  .finance {
+    gap: 52px;
+    .bread {
+      font-size: 14px;
+      color: #00000099;
+      font-weight: 400;
+      margin-top: 30px;
+      margin-bottom: 32px;
+    }
+    .container-order {
+      display: flex;
+      gap: 32px;
+    }
+    &__order {
+      display: flex;
+      flex-direction: column;
+      width: 280px;
+      height: max-content;
+      padding: 28px;
+      padding-right: 32px;
+      border: 1px solid #0000001a;
+      border-radius: 20px;
+      box-sizing: border-box;
+    }
+    &__price {
+      font-size: 30px;
+      font-weight: 700;
+      color: #101828;
+    }
+    &__description {
+      font-size: 14px;
+      color: #00000099;
+      font-weight: 400;
+      margin-bottom: 17px;
+    }
+    &__button {
+      color: #0ec615;
+      padding: 10px 16px;
+      outline: none;
+      border: none;
+      background-color: white;
+      width: max-content;
+      border: 1px solid #0ec615;
+      border-radius: 8px;
+    }
+    .transactions {
+      display: flex;
+      flex-direction: column;
+      margin-top: 52px;
+      &__title {
+        color: #000000;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 26px;
+      }
+      &__menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 16px;
+        margin-bottom: 36px;
+      }
+      &__item {
+        color: #6941c6;
+        list-style-type: none;
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #6941c6;
+      }
+      &__item-default {
+        color: #667085;
+        border: 1px solid transparent;
+      }
+      &__search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 500px;
+        height: 44px;
+        box-sizing: border-box;
+        padding: 10px 0;
+        padding-left: 16px;
+        border: 0.5px solid #d0d5dd;
+        border-radius: 8px;
+      }
+      &__input {
+        display: flex;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        &::placeholder {
+          color: #667085;
+        }
+      }
+    }
+  }
+}

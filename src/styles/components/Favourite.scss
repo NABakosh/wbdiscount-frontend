@@ -31,8 +31,43 @@
     .card {
       display: flex;
       flex-direction: column;
-      width: max-content;
+      width: 100%;
+      user-select: none;
       gap: 3px;
+      box-sizing: border-box;
+
+      .topCard {
+        width: 100%;
+        position: relative;
+        .cardImg {
+          width: 100%;
+          aspect-ratio: 1/1.2;
+          border-radius: 20px;
+        }
+        .loveCard {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          cursor: pointer;
+          &.active {
+            svg {
+              path {
+                fill: red;
+              }
+            }
+          }
+        }
+        .discount {
+          position: absolute;
+          bottom: 10px;
+          padding: 2px 3px;
+          border-radius: 20px;
+          width: max-content;
+          background-color: #fff6ed;
+          color: #c4320a;
+          left: 15px;
+        }
+      }
       .info {
         margin-top: 15px;
         display: flex;

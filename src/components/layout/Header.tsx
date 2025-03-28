@@ -59,7 +59,7 @@ function Header() {
               </Link>
             </li>
             <li className="header__nav-item">
-              <Link to="#" className="header__nav-link">
+              <Link to="/favourites" className="header__nav-link">
                 <img
                   src={loveIcon}
                   alt="Избранное"

@@ -1,18 +1,19 @@
-import card from "../assets/images/common/prototypeCard.svg";
-import Card from "../components/layout/Card";
+import { useSelector } from "react-redux";
 import "../styles/components/Favourite.scss";
-type Props = {};
-function Favourites({}: Props) {
+import { RootState } from "../store/index";
+import Card from "../components/layout/Card";
+function Favourites() {
+  const items = useSelector((state: RootState) => state.favourites.items);
   return (
     <div className="favourites wrapper">
       <div className="favourites-container">
         <div className="favourites__title">
           <strong className="title">Избранное</strong>
-          <p className="description">5 товаров</p>
+          <p className="description">{items.length} товаров</p>
         </div>
         <div className="favourites__groups-card">
-          {Array.from({ length: 8 }).map((_, index) => (
-            <Card card={card} key={index} />
+          {items.map((obj) => (
+            <Card key={obj.id} {...obj} isLoved={true} />
           ))}
         </div>
       </div>

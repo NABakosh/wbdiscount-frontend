@@ -1,6 +1,8 @@
 import "../../styles/ui/TransactionsTable.scss";
-
-const TransactionsTable = () => {
+type Props = {
+  transSearch: string;
+};
+const TransactionsTable = ({ transSearch }): Props => {
   const transactions = [
     {
       id: "12345678",
@@ -19,7 +21,6 @@ const TransactionsTable = () => {
       redemptionId: "",
     },
   ];
-
   return (
     <div className="transactions-table">
       <table className="table">
@@ -46,16 +47,38 @@ const TransactionsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction, index) => (
-            <tr key={index}>
-              <td>{transaction.id}</td>
-              <td style={{ color: "#0253FF" }}>{transaction.amount}</td>
-              <td style={{ color: "#00891E" }}>{transaction.type}</td>
-              <td style={{ color: "#F9FAFB" }}>{transaction.date}</td>
-              <td>{transaction.description}</td>
-              <td>{transaction.redemptionId || "-"}</td>
-            </tr>
-          ))}
+          {transactions
+            .filter((transaction) =>
+              transSearch.length
+                ? transaction.id.includes(transSearch)
+                : transaction
+            )
+            .map((transaction, index) => (
+              <tr key={index}>
+                <td>{transaction.id}</td>
+                <td style={{ color: "#0253FF" }}>{transaction.amount}</td>
+                <td style={{ color: "#00891E" }}>{transaction.type}</td>
+                <td style={{ color: "#F9FAFB" }}>{transaction.date}</td>
+                <td>{transaction.description}</td>
+                <td>{transaction.redemptionId || "-"}</td>
+              </tr>
+            ))}
+          {transactions
+            .filter((transaction) =>
+              transSearch.length
+                ? transaction.id.includes(transSearch)
+                : transaction
+            )
+            .map((transaction, index) => (
+              <tr key={index}>
+                <td>{transaction.id}</td>
+                <td style={{ color: "#0253FF" }}>{transaction.amount}</td>
+                <td style={{ color: "#00891E" }}>{transaction.type}</td>
+                <td style={{ color: "#F9FAFB" }}>{transaction.date}</td>
+                <td>{transaction.description}</td>
+                <td>{transaction.redemptionId || "-"}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>

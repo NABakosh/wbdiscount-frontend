@@ -1,10 +1,13 @@
 import "../styles/components/Finance.scss";
 import search from "../assets/images/icons/searchHeader.svg";
 import TransactionsTable from "../components/ui/TransactionsTable";
+import { useState } from "react";
 
 type Props = {};
 
 function Finance({}: Props) {
+  const [transSearch, setTransSearch] = useState("");
+
   return (
     <div className="wrapper">
       <div className="finance">
@@ -34,12 +37,14 @@ function Finance({}: Props) {
           <div className="transactions__search">
             <img src={search} alt="" />
             <input
+              value={transSearch}
+              onChange={(e) => setTransSearch(e.target.value)}
               type="text"
               placeholder="Введите ID выкупа"
               className="transactions__input"
             />
           </div>
-          <TransactionsTable />
+          <TransactionsTable transSearch={transSearch} />
         </div>
       </div>
     </div>

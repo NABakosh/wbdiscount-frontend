@@ -1,5 +1,6 @@
-export { default as Home } from "./Home";
-export { default as Favourites } from "./Favourites";
-export { default as SellerCard } from "./SellerCard";
-export { default as ProfileBuyer } from "./ProfileBuyer";
-export { default as Finance } from "./Finance";
+export { default as Favourites } from './Favourites'
+export { default as Finance } from './Finance'
+export { default as Home } from './Home'
+export { default as ProductItem } from './ProductItem'
+export { default as ProfileBuyer } from './ProfileBuyer'
+export { default as SellerCard } from './SellerCard'

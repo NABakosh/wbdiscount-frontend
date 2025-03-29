@@ -1,168 +1,176 @@
 .smooth-dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .dropdown-button {
-  padding: 10px 20px;
-  background-color: var(--price-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s;
-  width: 305px;
-  justify-content: space-between;
-  border: 0.5px solid transparent;
-  border-radius: 10px;
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    color: #d1cece;
-  }
+	padding: 10px 20px;
+	background-color: var(--price-color);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	transition: background-color 0.3s;
+	width: 305px;
+	justify-content: space-between;
+	border: 0.5px solid transparent;
+	border-radius: 10px;
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 15px;
+		color: #d1cece;
+	}
 }
 
 .dropdown-button:hover {
-  background-color: transparent;
-  border: 0.5px solid var(--decription);
-  border-radius: 10px;
-  color: black;
-  .arrow {
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-    transition: transform 0.3s;
-  }
+	background-color: transparent;
+	border: 0.5px solid var(--decription);
+	border-radius: 10px;
+	color: black;
+	.arrow {
+		border: solid black;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		padding: 3px;
+		transition: transform 0.3s;
+	}
 }
 
 .arrow {
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transition: transform 0.3s;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 3px;
+	transition: transform 0.3s;
 }
 
 .down {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .up {
-  transform: rotate(-135deg);
+	transform: rotate(-135deg);
 }
 
 .dropdown-content {
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 10px 10px;
-  z-index: 1;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 1s ease, opacity 0.3s ease;
-  transform-origin: top;
-  width: 100%;
+	position: absolute;
+	background-color: #ffffff;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	z-index: 1;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 1s ease, opacity 0.3s ease;
+	transform-origin: top;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border: 1px solid #0000003b;
+	top: 110%;
 }
 .dropdown-content.open {
-  max-height: 500px; /* Достаточно большое значение для всех элементов */
-  opacity: 1;
+	max-height: 500px; /* Достаточно большое значение для всех элементов */
+	opacity: 1;
 }
 .dropdown-price-content {
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 10px 10px;
-  z-index: 1;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 1s ease, opacity 0.3s ease;
-  transform-origin: top;
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  .group-input {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2px;
-    .inputPrice {
-      width: 50%;
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 0.5px solid black;
-    }
-  }
-  .button {
-    background-color: var(--price-color);
-    color: white;
-    outline: none;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    width: max-content;
-    cursor: pointer;
-  }
+	position: absolute;
+	background-color: #ffffff;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	z-index: 1;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 1s ease, opacity 0.3s ease;
+	transform-origin: top;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border: 1px solid #0000003b;
+	top: 110%;
+	.group-input {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2px;
+		.inputPrice {
+			width: 50%;
+			padding: 10px 14px;
+			border-radius: 8px;
+			border: 0.5px solid #d0d5dd;
+		}
+	}
+	.button {
+		background-color: var(--price-color);
+		color: white;
+		outline: none;
+		border: none;
+		padding: 10px 18px;
+		border-radius: 8px;
+		width: max-content;
+		cursor: pointer;
+	}
 }
 .dropdown-price-content.open {
-  max-height: 500px; /* Достаточно большое значение для всех элементов */
-  opacity: 1;
+	max-height: 500px; /* Достаточно большое значение для всех элементов */
+	opacity: 1;
 }
 
 .dropdown-item {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  cursor: pointer;
-  transition: background-color 0.2s;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	transition: background-color 0.2s;
 }
 
 .dropdown-item:hover {
-  background-color: #f1f1f1;
+	background-color: #f1f1f1;
 }
 .container-drop-price {
-  box-sizing: border-box;
-  padding: 6px;
-  .groups-drop-sort {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    .sort {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1px 5px;
-      border: 1px solid #dad5d5;
-      border-radius: 8px;
-      cursor: pointer;
-      li {
-        font-size: 15px;
-        width: max-content;
-        color: #565555;
-      }
-      .checked {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 1px solid #dad5d5;
-        transition: background-color 0.3s ease-in-out;
-        &.active {
-          background-color: var(--price-color);
-        }
-      }
-    }
-  }
+	box-sizing: border-box;
+	padding: 6px;
+	.groups-drop-sort {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		.sort {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 8px 15px;
+			border: 1px solid #dad5d5;
+			border-radius: 8px;
+			cursor: pointer;
+			li {
+				font-size: 15px;
+				width: max-content;
+				color: #565555;
+			}
+			.checked {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				border: 1px solid #dad5d5;
+				transition: background-color 0.3s ease-in-out;
+				&.active {
+					background-color: var(--price-color);
+				}
+			}
+		}
+	}
 }
